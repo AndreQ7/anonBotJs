@@ -29,9 +29,9 @@ bot.command("start", async (ctx) =>{
     let agr = ctx.message.text.split(" ")[1]
     if (agr == undefined){
       let user_id = ctx.from.id;
-      let shareurl = ("https://t.me/share/url?url=t.me/test_xen_bot?start="+user_id);
+      let shareurl = ("https://t.me/share/url?url=t.me/questions_q7_bot?start="+user_id);
       const startKeyboard = new InlineKeyboard().url("Share", shareurl);
-      await ctx.reply(`<i>Привет! Поделитесь этой <a href="t.me/test_xen_bot?start=+${user_id}">ссылкой</a>,\nчтобы получать анонимные сообщения!</i>`, {reply_markup: startKeyboard, parse_mode: 'HTML'});
+      await ctx.reply(`<i>Привет! Поделитесь этой <a href="t.me/questions_q7_bot?start=+${user_id}">ссылкой</a>,\nчтобы получать анонимные сообщения!</i>`, {reply_markup: startKeyboard, parse_mode: 'HTML'});
     }else{
         let user_id = agr;
         user_id_to_chat[ctx.from.id] = user_id;
