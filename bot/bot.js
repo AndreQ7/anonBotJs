@@ -14,7 +14,6 @@ app.listen(port, () => {
 
 const bot = new Bot(process.env.TOKEN);
 const user_id_to_chat = {};
-const adminId = 5520954742;
 function getMessageType(message) {
   if (message.text) return 'text';
   if (message.photo) return 'photo';
